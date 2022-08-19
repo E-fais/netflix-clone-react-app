@@ -31,3 +31,21 @@
 }.posterImage:hover{
     transform: scale(1.2);
 }
+.youtube{
+    padding:2rem;
+   
+}
+.closeBtn{
+    color:white;
+    background-color: red;
+    border: none;
+    padding:10px;
+    font-weight: 700;
+    border-radius: 10px;
+
+}
+.btnDiv{
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}

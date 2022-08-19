@@ -41,7 +41,19 @@ function Posters(props) {
         )}
       </div>
       
-      { urlId && <Youtube videoId={urlId.key} opts={opts} />}
+      { urlId &&
+       <div className="youtube">
+       
+      <Youtube videoId={urlId.key} opts={opts} />
+      <div className="btnDiv">
+       <button 
+       className="closeBtn"
+       onClick={()=>{setUrlId('')}}>
+        Close trailer
+        </button>
+        </div>
+      </div>
+      }
       {console.log(urlId)}
     </div>
   );
