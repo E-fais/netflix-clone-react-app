@@ -42,10 +42,28 @@
     padding:10px;
     font-weight: 700;
     border-radius: 10px;
+    cursor: pointer;
 
 }
 .btnDiv{
     display: flex;
     justify-content: center;
     margin: 3px;
+}
+.myListBtn{
+    color:white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: #fff;
+    width:50%;
+    cursor: pointer;
+}
+.moviesPosters{
+text-align: center;
+}
+.removeMyListBtn{
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
 }

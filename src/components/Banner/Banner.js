@@ -3,7 +3,10 @@ import React from 'react'
 import axios from '../../axios/axios'
 import { apiKey,imageUrl } from '../../constants/constants'
 import './banner.css'
+import {useNavigate} from 'react-router-dom'
+
 function Banner() {
+  const navigate=useNavigate()
  const random= Math.floor(Math.random()*20)
   const [movie, setMovie] = useState()
   useEffect(() => {
@@ -23,8 +26,14 @@ function Banner() {
       <div className="content">
         <h1 className="title">{movie?movie.title:''}</h1>
         <div className="banner-buttos">
-          <button className="button">Play</button>
-          <button className="button">My List</button>
+          <button  className="button"
+          >Play
+          </button>
+          <button
+           className="button"
+           onClick={()=>navigate('/mylist')}>
+            My List
+            </button>
         </div>
         <h1 className="description">{movie?movie.overview:''}</h1>
       </div>

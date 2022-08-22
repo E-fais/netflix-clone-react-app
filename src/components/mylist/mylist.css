@@ -1,0 +1,33 @@
+.container{
+   margin-top: 100px;}
+   h1{
+    text-align: center;
+    
+ 
+   }
+   .thumbNail{
+    display: flex;
+    padding:10px;
+   align-items: center;
+   margin-bottom: 5px;
+   border-bottom: 4px solid yellow;
+gap:10px;
+  
+   }
+   .btn{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+    border-color: black;
+    margin-top: 10px;
+    cursor: pointer;
+    
+   }
+   .moviedescription{
+   
+    color: white;
+    font-weight: 700;
+    overflow-wrap: ;
+   }
+   

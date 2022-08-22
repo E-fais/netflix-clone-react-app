@@ -1,21 +1,38 @@
+import React, { Fragment, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import './App.css'
-import Banner from './components/Banner/Banner'
-import Posters from "./components/posters/Posters";
-import {action,horror,comedy, documentary, original,romance} from './urls'
+import MyList from "./components/mylist/MyList";
+import { Routes, Route } from 'react-router-dom'
+import Home from "./components/home/Home";
+import { MovieContext } from './context/context'
 
 function App() {
+const [myList,setMylist]=useState([])
+
+const removeFromMylist=(id)=>{
+  const oldList=[...myList]
+  const filteredList=oldList.filter(obj=>obj.id===id)
+  setMylist(filteredList)
+}
+const addToMylist=(movie)=>{
+  const oldList=[...myList]
+  const newList=oldList.concat(movie)
+  setMylist(newList)
+  console.log(myList.length)
+}
   return (
-    <div className="App">
-     <NavBar/>
-    <Banner/>
-    <Posters url={original} title= 'Netflix Originals'/>
-    <Posters url={action} isSmall title= 'Action Movies'/>
-    <Posters url={comedy} title='Comedy Movies' isSmall/>
-    <Posters url={horror} title='Horror Movies' isSmall/>
-    <Posters url={romance} title='Romance Movies' isSmall/>
-    <Posters url={documentary} title='Documentaries' isSmall/>
-    </div>
+    <>
+      <NavBar />
+      <MovieContext.Provider value={{myList, addToMylist,removeFromMylist}}>
+        <Fragment>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='mylist' element={<MyList />} />
+          </Routes>
+        </Fragment>
+      </MovieContext.Provider>
+    </>
+
   );
 }
 
