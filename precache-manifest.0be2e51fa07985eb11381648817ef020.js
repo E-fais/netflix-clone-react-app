@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/netflix-clone-react-app/static/js/runtime~main.aac008b8.js"
   },
   {
-    "revision": "698b4cd9b848422ca74ae07888ace12b",
+    "revision": "fa019f59367d8d19a984c0da96762654",
     "url": "/netflix-clone-react-app/index.html"
   }
 ];
