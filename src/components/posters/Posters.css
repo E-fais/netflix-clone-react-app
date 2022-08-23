@@ -1,6 +1,7 @@
 .rows{
     padding: 20px;
     color: #fff;
+    
    
 }
 .posters{
@@ -8,6 +9,7 @@
     display: flex;
     overflow-x:scroll ;
     overflow-y: hidden;
+    
 }
 
 
@@ -49,6 +51,7 @@
     display: flex;
     justify-content: center;
     margin: 3px;
+   
 }
 .myListBtn{
     color:white;
@@ -58,6 +61,7 @@
     box-shadow: #fff;
     width:50%;
     cursor: pointer;
+    margin-top: 5px;
 }
 .moviesPosters{
 text-align: center;
@@ -66,4 +70,7 @@ text-align: center;
     background-color: white;
     padding: 5px;
     border-radius: 8px;
+    font-weight: 700;
+    margin-top: 5px;
+    font-weight: 700;
 }

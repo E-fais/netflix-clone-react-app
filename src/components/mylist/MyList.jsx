@@ -53,21 +53,25 @@ function MyList() {
             return (
               <div className='thumbNail'>
                <div>
+                <h3>{obj.name}</h3>
                 <img
                   onClick={() => showTrailer(obj.id)}
-                  className="posterImage-small"
+                  className="mylistImage"
                   src={`${imageUrl + obj.backdrop_path}`}
                   alt="loading images"
                 />
                 </div>
-                <div>
-                <p  className="moviedescription">{obj.overview}</p>
-                <button
+                
+                <p  className="mylistDescription">{obj.overview}</p>
+                <div><button
                   className="btn"
-                  onClick={() => removeFromMylist(obj.id)}
+                  onClick={() =>{
+                     removeFromMylist(obj.id)
+                    }}
                 >
                   Remove From My List
-                </button></div>
+                </button>
+                </div>
               </div>
             );
           })

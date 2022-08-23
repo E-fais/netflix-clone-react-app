@@ -13,6 +13,7 @@ const removeFromMylist=(id)=>{
   const oldList=[...myList]
   const filteredList=oldList.filter(obj=>obj.id===id)
   setMylist(filteredList)
+ 
 }
 const addToMylist=(movie)=>{
   const oldList=[...myList]
